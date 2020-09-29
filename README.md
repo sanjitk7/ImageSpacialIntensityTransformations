@@ -10,6 +10,10 @@
 4. argparse (for parsing command line arguments)
 5. Numpy (pixel data manipulation)
 
+## Architecture of Program
+
+![](./img/arch.png)
+
 ## How to Run
 
 Set up all dependencies
