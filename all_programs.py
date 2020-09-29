@@ -1,6 +1,7 @@
 from PIL import Image
 from math import log10
 import numpy as np
+import sys
 
 im = Image.open("pic.png").convert("LA")
 pixelMap = im.load()

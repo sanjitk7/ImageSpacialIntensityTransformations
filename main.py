@@ -1,5 +1,7 @@
 from PIL import Image
 from math import log10
+import sys
+import argparse
 import numpy as np
 from image_negetive import image_negetive
 from image_log_transform import image_log_transform
@@ -8,7 +10,13 @@ from contrast_stretching import contrast_stretching
 from image_graylevel_slicing import image_graylevel_slicing
 from image_bitplane_slicing import bit_plane_splicing
 
-im = Image.open("pic.png").convert("LA")
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--input","--picture",help="input image")
+args = parser.parse_args()
+
+im = Image.open(args.input).convert("LA")
 
 
 print("Enter your preffered Operation:\n1.Image Negetive\n2.Log Transform\n3.Power-Law Transform\n4.Contrast Stetching\n5.Graylevel Sclicing\n6.Bit Plane Splicing")
@@ -23,7 +31,7 @@ elif (selection == 2):
     # 2. LOG TRANSFORMS
     c = int(input("Enter c value:"))
     print("Formula: s=c*log(1+r)")
-    image_log_transform(im)
+    image_log_transform(im,c)
 elif(selection==3):
     # 3. POWER-LAW TRANSFORMATIONS
     c = int(input("Enter c value:"))
@@ -43,9 +51,10 @@ elif (selection==5):
     S = int(input("Enter S value (conv):"))
     if (input("Enter 'y' if background substitution is required:")=='y'):
         with_bg_subsititution = True
+        some_val_bg = 0
     else:
         with_bg_subsititution = False
-    some_val_bg = int(input("Enter value to clip the background to:"))
+        some_val_bg = int(input("Enter value to clip the background to:"))
     image_graylevel_slicing(im,with_bg_subsititution,some_val_bg,A,B,S)
 elif (selection==6):
     # 3. BITPLANE SLICING

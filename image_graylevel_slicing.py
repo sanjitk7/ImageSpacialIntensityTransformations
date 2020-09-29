@@ -1,6 +1,6 @@
 # 2. GRAYLEVEL SLICING
 
-def image_graylevel_slicing(im,with_bg_subsititution,some_val_bg,A,B,S):
+def image_graylevel_slicing(im,with_bg_subsititution,A,B,S,some_val_bg=0):
     pixelMapIn = im.load()
     out1 = im.copy()
     pixelMapOut = out1.load()
