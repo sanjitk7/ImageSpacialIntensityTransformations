@@ -1,13 +1,13 @@
 # Spacial Intensity Transformations
 
-*CSE4019 Image Processing - Fall 2020 - Digital Assignment - 18BCE0715*
+*CSE4019 Image Processing - Fall 2020 - Digital Assignment - 18BCE0715 - Sanjit*
 
 ## Environment and Dependencies
 
 1. MacOS 10.15.6
 2. Python 3.7.7
 3. Pillow (only for input and output display)
-4. argparse (for parsing commandline arguments)
+4. argparse (for parsing command line arguments)
 5. Numpy (pixel data manipulation)
 
 ## How to Run
@@ -32,32 +32,32 @@ Enter Parameters (and Constants) As Required By the selected transformation
 
 ![sample-par](./img/sample-para.png)
 
-## Tranforamtions Functions Implemeted
+## Transformations Functions Implemented
 
-1. Image Negetive
+1. Image Negative
 2. Log Transform
 3. Power-Law Transform
 4. Contrast Stretching
-5. Graylevel Slicing
+5. Gray-level Slicing
 6. Bit Plane Splicing
 
-All input paramenters should be entered by the user as required by the corresponding transformation
+All input parameters should be entered by the user as required by the corresponding transformation
 
-## Sample input
+## Sample input - Converted to Gray-scale on input
 
-![scenic-walk](./img/pic.png)
+![scenic-walk](./img/myPicture.png)
 
 ## Sample output
 
-Output for each method contains the formua followed by the output image. Here are a few processed images for the sample input image.
+Output for each method contains the formula followed by the output image. Here are a few processed images for the sample input image.
 
-### 1. Image Negetive
+### 1. Image Negative
 ![](./img/output-readme/image-negetive-1.png)
 
 ### 2. Log Transform with c=50
 ![](./img/output-readme/image-log-1.png)
 
-### 3. Power-Law Tranform with c=1 and $\gamma$	= 3
+### 3. Power-Law Transform with c=1 and $\gamma$	= 3
 
 ![](./img/output-readme/gamma-1.png)
 
@@ -71,7 +71,7 @@ Output for each method contains the formua followed by the output image. Here ar
 
 ![](./img/output-readme/conrast-stretching-2.png)
 
-### 5. Graylevel Slicing
+### 5. Gray-level Slicing
 
 #### without Background Slicing and limits = 80 to 130 and S=70 and background-clipped to 50
 
